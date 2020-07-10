@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:gravity="center"
+       android:orientation="vertical"
+       android:id="@+id/LinearLayoutHome">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/poppins_bold"
+           android:textColor="#fff"
+           android:textSize="24dp"
+           android:textAlignment="center"
+           android:layout_gravity="center"
+           android:text="CORONA VIRUS COVID-19\n Global Cases"/>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#6C6C6C"
+           android:id="@+id/TvLabelTotalConfirmed"
+           style="@style/LabelFontStyle"
+           android:layout_gravity="center"
+           android:text="Total Confirmed"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/colorTotalConfirmed"
+           android:id="@+id/TvTotalConfirmed"
+           style="@style/TotalFontStyle"
+           android:layout_gravity="center"
+           tools:text="2000195"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#6C6C6C"
+           android:id="@+id/TvLabelTotalDeaths"
+           style="@style/LabelFontStyle"
+           android:layout_gravity="center"
+           android:text="Total Deaths"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/colorTotalDeaths"
+           android:id="@+id/TvTotalDeaths"
+           style="@style/TotalFontStyle"
+           android:layout_gravity="center"
+           tools:text="33174"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#6C6C6C"
+           android:id="@+id/TvLabelTotalRecovered"
+           style="@style/LabelFontStyle"
+           android:layout_gravity="center"
+           android:text="Total Recovered"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/colorTotalRecovered"
+           android:id="@+id/TvTotalRecovered"
+           style="@style/TotalFontStyle"
+           android:layout_gravity="center"
+           tools:text="141916"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/TvLastUpdate"
+           style="@style/LabelFontStyle"
+           android:fontFamily="@font/poppins_bold"
+           android:textColor="#fff"
+           tools:text="Last Updated \n Thu 9 April 2020 19:51:00 PM"
+
+           android:textAlignment="center"
+           android:gravity="center_horizontal" />
+       <ProgressBar
+           android:id="@+id/progress_circular_home"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:indeterminate="true"
+           android:indeterminateDrawable="@drawable/ic_dashboard_black_24dp"/>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayoutHome">
+
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            android:layout_weight="1"
+            ads:adUnitId="ca-app-pub-4381008115912901/1880791526">
+        </com.google.android.gms.ads.AdView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

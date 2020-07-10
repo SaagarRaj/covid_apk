@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.country.DashboardFragment">
+    <LinearLayout
+        android:id="@+id/LinearLayoutTotalCountries"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTotalCountries"
+            tools:text="189 countries"
+            style="@style/TotalFontStyle"
+            android:textColor="#6C6C6C"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/LinearLayoutTotalCountries"
+        android:id="@+id/rvCovidCountry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_list_covid_country" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_circular_country"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/ic_dashboard_black_24dp"
+        android:indeterminate="true"/>
+
+</RelativeLayout>
